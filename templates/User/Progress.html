@@ -1,0 +1,6 @@
+<h2>Progress</h2>
+{% if result %}<p>Your style: {{result.get_final_style_display}}</p>{% endif %}
+<h3>Trainer Suggestions</h3>
+<ul>
+{% for s in suggestions %}<li>{{s.suggestion_text}} ({{s.created_at}})</li>{% empty %}<li>No suggestions</li>{% endfor %}
+</ul>

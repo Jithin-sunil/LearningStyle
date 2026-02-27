@@ -1,0 +1,7 @@
+<h2>Manage Trainers</h2>
+<ul>
+{% for t in trainers %}
+<li>{{t.trainer_name}} - status {{t.trainer_status}} 
+<a href="?approve={{t.id}}">Approve</a> | <a href="?reject={{t.id}}">Reject</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,11 @@
+<h2>Learning Style Test (15 Questions)</h2>
+<form method="post">{% csrf_token %}
+{% for _ in ''|center:15 %}
+<p>Question {{forloop.counter}}:
+<label><input type="radio" name="q{{forloop.counter}}" value="Text" required>Text</label>
+<label><input type="radio" name="q{{forloop.counter}}" value="Video">Video</label>
+<label><input type="radio" name="q{{forloop.counter}}" value="Practical">Practical</label>
+</p>
+{% endfor %}
+<button type="submit">Submit Test</button>
+</form>

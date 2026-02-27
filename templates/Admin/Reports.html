@@ -1,0 +1,6 @@
+<h2>Reports</h2>
+<h3>Learners per Style</h3>
+<ul>{% for s in style_counts %}<li>{{s.final_style}}: {{s.total}}</li>{% endfor %}</ul>
+<h3>Topic Popularity</h3>
+<ul>{% for t in topic_popularity %}<li>{{t.topic__topic_name}}: {{t.total}}</li>{% endfor %}</ul>
+<p>Total content count: {{total_content}}</p>

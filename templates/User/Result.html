@@ -1,0 +1,9 @@
+<h2>Learning Result</h2>
+{% if result %}
+<p>Text Score: {{result.text_score}}</p>
+<p>Video Score: {{result.video_score}}</p>
+<p>Practical Score: {{result.practical_score}}</p>
+<p>Final Style: {{result.get_final_style_display}}</p>
+{% else %}
+<p>No result available. Take test first.</p>
+{% endif %}

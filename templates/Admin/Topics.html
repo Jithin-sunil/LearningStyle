@@ -1,0 +1,7 @@
+<h2>Topics</h2>
+<form method="post">{% csrf_token %}
+<input name="topic_name" placeholder="Topic name" required>
+<textarea name="topic_description" placeholder="Description" required></textarea>
+<button type="submit">Add Topic</button>
+</form>
+<ul>{% for t in topics %}<li>{{t.topic_name}}</li>{% endfor %}</ul>

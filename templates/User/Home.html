@@ -1,0 +1,8 @@
+<h2>User Home</h2>
+<p>Welcome {{user.user_name}}</p>
+<a href="/user/test/">Take Test</a> |
+<a href="/user/result/">Result</a> |
+<a href="/user/recommended/">Recommended Content</a> |
+<a href="/user/progress/">Progress</a> |
+<a href="/user/logout/">Logout</a>
+{% if result %}<p>Current style: {{result.get_final_style_display}}</p>{% endif %}

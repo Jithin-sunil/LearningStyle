@@ -1,0 +1,9 @@
+<h2>Recommended Content</h2>
+{% if result %}<p>Based on your style: {{result.get_final_style_display}}</p>{% endif %}
+<ul>
+{% for content in contents %}
+<li>{{content.content_title}} ({{content.content_type}}) - Topic: {{content.topic.topic_name}}</li>
+{% empty %}
+<li>No content found.</li>
+{% endfor %}
+</ul>
