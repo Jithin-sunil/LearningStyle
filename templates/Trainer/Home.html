@@ -1,0 +1,11 @@
+<h2>Trainer Home</h2>
+<p>Welcome {{trainer.trainer_name}}</p>
+<a href="/trainer/logout/">Logout</a>
+<h3>Assigned Learners</h3>
+<ul>
+{% for item in assignments %}
+<li><a href="/trainer/learner/{{item.user.id}}/">{{item.user.user_name}}</a></li>
+{% empty %}
+<li>No learners assigned.</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,7 @@
+<h2>Assignments</h2>
+<form method="post">{% csrf_token %}
+<select name="trainer">{% for t in trainers %}<option value="{{t.id}}">{{t.trainer_name}}</option>{% endfor %}</select>
+<select name="user">{% for u in users %}<option value="{{u.id}}">{{u.user_name}}</option>{% endfor %}</select>
+<button type="submit">Assign</button>
+</form>
+<ul>{% for a in assignments %}<li>{{a.trainer.trainer_name}} -> {{a.user.user_name}}</li>{% endfor %}</ul>

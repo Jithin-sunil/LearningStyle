@@ -1,0 +1,8 @@
+<h2>Login</h2>
+<p style="color:red">{{message}}</p>
+<form method="post">{% csrf_token %}
+<input name="email" type="email" placeholder="Email" required><br>
+<input name="password" type="password" placeholder="Password" required><br>
+<button type="submit">Login</button>
+</form>
+<p>Admin demo: admin@lsi.com / admin123</p>

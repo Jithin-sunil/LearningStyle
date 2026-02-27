@@ -1,0 +1,7 @@
+<h2>Learner Detail - {{user.user_name}}</h2>
+{% if result %}<p>Style: {{result.get_final_style_display}}</p>{% endif %}
+<form method="post">{% csrf_token %}
+<textarea name="suggestion_text" placeholder="Add suggestion" required></textarea>
+<button type="submit">Save</button>
+</form>
+<ul>{% for s in suggestions %}<li>{{s.suggestion_text}}</li>{% endfor %}</ul>

@@ -1,0 +1,9 @@
+<h2>Contents</h2>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+<input name="content_title" placeholder="Title" required>
+<select name="topic">{% for t in topics %}<option value="{{t.id}}">{{t.topic_name}}</option>{% endfor %}</select>
+<select name="content_type"><option>Text</option><option>Video</option><option>Practical</option></select>
+<input name="content_file" type="file">
+<button type="submit">Add Content</button>
+</form>
+<ul>{% for c in contents %}<li>{{c.content_title}} - {{c.content_type}}</li>{% endfor %}</ul>
